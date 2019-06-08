@@ -8,6 +8,10 @@
     border: 1px solid #b57b30;
     height: 240px;
 
+    @media screen and (max-width: 500px){
+        width: 70%;
+    }
+
     &__date{
         color: #b57b30;
         font-size: 39px;

@@ -5,13 +5,13 @@
             justify-content: center;
             align-items: center;
             position: absolute;
-            top: 0;
+            top: 30%;
             width: 100%;
             height: 100%;
-            z-index: -1;
+            z-index: 1;
 
-            @media screen and (max-width: $bp-LG){
-                margin-top: 15px;
+            @media screen and(max-width: $bp-SM) {
+                top: 30%;
             }
 
             button {
@@ -30,8 +30,14 @@
                 &:focus {
                     outline: none;
                 }
+
                 @media screen and(max-width: $bp-LG) {
                     top: 5%;
+                }
+
+                @media screen and(max-width: $bp-SM) {
+                    width: 50px;
+                    height: 30px;
                 }
             }
 
@@ -43,17 +49,33 @@
                 right: -13%;
             }
 
+            @media screen and(max-width: $bp-MD){
+                .owl-prev {
+                    left: -17%;
+                }
+    
+                .owl-next {
+                    right: -17%;
+                }
+            }
+
             @media screen and(max-width: $bp-SM){
                 height: auto;
-                position: relative;
-                
-
-                button{
-                    position: relative;
-                    left: 0 !important;
-                    right: 0 !important;
+        
+                .owl-prev {
+                    left: -4%;
+                }
+    
+                .owl-next {
+                    right: -4%;
                 }
             }
         }
+    }
+
+    .item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

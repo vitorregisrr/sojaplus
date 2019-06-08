@@ -3,9 +3,39 @@
     border: none;
     outline: none;
     font-weight: bold;
+    cursor: pointer;
     
     &:active, &:focus{
         border: none;
         outline: none;
+    }
+}
+
+.btn-flag{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    @include transition();
+
+    &:hover{
+        @include scale(1.05);
+    }
+
+    @media screen and(max-width: $bp-LG) {
+        width: 20px;
+        height: 20px;
+        margin-top: 6px;
+    }
+    
+    &--pt{
+        background-image: url(/images/flags/pt.png);
+    }
+
+    &--ing{
+        background-image: url(/images/flags/ing.png);
     }
 }
