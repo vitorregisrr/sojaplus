@@ -1,0 +1,44 @@
+.main-nav{
+    background-color: #fff;
+    background: linear-gradient(to right, rgba(247, 247, 247, 0.5192), rgba(255, 255, 255, 0.563),  rgba(255, 255, 255, 0.563),  rgba(255, 255, 255, 0.563),  rgba(255, 255, 255, 0.863), rgba(247, 247, 247, 0.192));
+    width: 100%;
+    display: block;
+
+    @media screen and(max-width: 768px){
+        display: none;
+    }
+    
+    &__list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__item{
+            display: inline-block;
+            padding: 13px 22px;
+            font-size: 15px;
+            line-height: 17px;
+            text-transform: uppercase;
+            color: black;
+            text-align: center;
+            letter-spacing: 0.2px;
+            @include transition();
+            
+            @media screen and (min-width: 768px) and (max-width: 992px){
+                font-size: 14px;
+            }
+
+            &:not(:first-child){
+                border-left: 1px solid black;
+            }
+
+            &.active, &:hover, &:active{
+                font-family: 'Myriad Pro Bold', sans-serif;
+            }
+
+            a{
+                color: inherit;
+            }
+        }
+    }
+}

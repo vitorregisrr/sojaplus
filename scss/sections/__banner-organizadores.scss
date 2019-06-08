@@ -1,0 +1,49 @@
+.banner-organizadores {
+
+    &__title {
+        padding: 20px 30px 20px 0;
+        background-color: #fff;
+        transform: translateY(45px);
+        display: inline-block;
+        text-transform: uppercase;
+        font-family: 'Myriad Pro Semibold', sans-serif;
+        font-weight: 600;
+        color: #332a1f;
+
+        @media screen and(max-width: 768px){
+            font-size: 17px;
+            text-align: center;
+            padding: 20px 10px;
+            transform: translate(5%, 38px);
+        }
+    }
+
+    &__content {
+        border: 1.3px solid #bf8d4c;
+        padding: 50px 30px 30px 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__item{
+        margin: 15px 18px;
+        @include transition();
+
+        @media screen and(max-width: 768px){
+            width: 80px;
+            height: 80px;
+            
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        
+        &:hover{
+            @include scale(1.05);
+        }
+    }
+}

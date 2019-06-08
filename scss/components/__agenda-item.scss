@@ -1,0 +1,48 @@
+.agenda-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 25px;
+    border: 1px solid #b57b30;
+    height: 240px;
+
+    &__date{
+        color: #b57b30;
+        font-size: 39px;
+        font-family: 'Myriad Pro Bold', sans-serif;
+    }
+
+    &__title{
+        font-size: 17px;
+        letter-spacing: 0.5px;
+        font-family: 'Myriad Pro Bold', sans-serif;
+    }
+
+    &__info{
+        letter-spacing: 0.3px;
+        margin-bottom: 20px;
+        
+        &__item{
+            margin-bottom: 2px;
+            font-size: 14px;
+        }
+        b{
+            font-family: 'Myriad Pro Bold', sans-serif;
+        }
+
+    }
+    &__more{
+        font-size: 13px;
+        font-family: 'Myriad Pro Bold', sans-serif;
+        text-transform: uppercase;
+        color: #b57b30;
+        justify-self: flex-end;
+        @include transition();
+        
+        &:hover{
+            color: #8b5f25;
+        }
+    }
+}

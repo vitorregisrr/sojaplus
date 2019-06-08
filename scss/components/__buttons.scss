@@ -1,0 +1,11 @@
+.btn-transparent{
+    background: none !important;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    
+    &:active, &:focus{
+        border: none;
+        outline: none;
+    }
+}

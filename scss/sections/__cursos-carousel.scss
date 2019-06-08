@@ -1,0 +1,100 @@
+.cursos-carousel {
+    background-color: #f5ebd0;
+    width: 100%;
+    min-height: 90vh;
+    background-image: url(/images/banners/bgwave.png);
+    background-size: cover;
+    margin-top: 80px;
+    position: relative;
+
+    @media screen and(max-width: 768px){
+        padding-bottom: 40px;
+        margin-top: 0;
+    }
+
+    .owl-dots{
+        position: absolute;
+        right: 50%;
+        width: 100%;
+        top: 66%;
+        transform: translateX(50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 578px){
+            top: 57%;
+        }
+
+        .owl-dot{
+            width: 12px;
+            height: 12px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            margin-right: 10px;
+            cursor: pointer;
+
+            &.active{
+                background-color: #b57b30;
+            }
+        }
+    }
+
+    &__item{
+        height: 100vh;
+        width: 100%;
+        
+        &__img{
+            height: 70%;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        
+        &__caption{
+            height: 30%;
+            border-top: 1.3px solid rgb(255, 255, 255);
+            background-color: #b57b30;
+            color: #fff;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+
+            &__title{
+                font-family: 'Myriad Pro Bold', sans-serif;
+                font-size: 30px;
+                margin-bottom: 5px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+
+                @media screen and (max-width: 768px) and (max-height: 568px){
+                    font-size: 23px;
+                }
+            }
+
+            &__subtitle{
+                font-size: 23px;
+                letter-spacing: 0.4px;
+
+                @media screen and (max-width: 768px) and (max-height: 568px){
+                    font-size: 17px;
+                }
+            }
+            
+            &__more{
+                cursor: pointer;
+                color: #fff;
+                text-transform: uppercase;
+
+                &:hover{
+                    color: rgb(235, 235, 235);
+                }
+            }
+        }
+    }
+}
