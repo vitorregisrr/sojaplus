@@ -1,4 +1,10 @@
 {
+  "_args": [
+    [
+      "mdi@2.1.19",
+      "C:\\Users\\vitor\\Desktop\\Projetos\\Empresas\\Sorocabacom\\Soja Plus"
+    ]
+  ],
   "_from": "mdi@2.1.19",
   "_id": "mdi@2.1.19",
   "_inBundle": false,
@@ -19,9 +25,8 @@
     "/"
   ],
   "_resolved": "https://registry.npmjs.org/mdi/-/mdi-2.1.19.tgz",
-  "_shasum": "492bfc0c4fd0c510ebd55301cc76eb03a7a2f34b",
-  "_spec": "mdi@2.1.19",
-  "_where": "C:\\Users\\vitor\\Desktop\\Projetos\\Empresas\\Sorocabacom\\Mahilla",
+  "_spec": "2.1.19",
+  "_where": "C:\\Users\\vitor\\Desktop\\Projetos\\Empresas\\Sorocabacom\\Soja Plus",
   "author": {
     "name": "Austin Andrews",
     "url": "http://twitter.com/templarian"
@@ -29,8 +34,6 @@
   "bugs": {
     "url": "https://github.com/Templarian/MaterialDesign/issues"
   },
-  "bundleDependencies": false,
-  "deprecated": "The mdi package was renamed to @mdi/font after v2.2.43. Please rename in your package.json for future updates.",
   "description": "Dist for Material Design Webfont. This includes the Stock and Community icons in a single webfont collection.",
   "homepage": "http://materialdesignicons.com",
   "keywords": [

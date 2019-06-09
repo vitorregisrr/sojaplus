@@ -3,6 +3,7 @@
     background: linear-gradient(to right, rgba(247, 247, 247, 0.3192), rgba(255, 255, 255, 0.563), rgba(255, 255, 255, 0.563), rgba(255, 255, 255, 0.563), rgba(255, 255, 255, 0.863), rgba(247, 247, 247, 0.392));
     width: 100%;
     display: block;
+    z-index: 5;
 
     @media screen and(max-width: $bp-LG) {
         position: absolute;
@@ -15,7 +16,7 @@
         @include transition();
 
         &.active {
-            max-height: 400px;
+            max-height: 1000px;
         }
     }
 
@@ -23,29 +24,55 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 0;
 
         @media screen and(max-width: $bp-LG) {
             flex-direction: column;
         }
 
         &__item {
-            display: inline-block;
-            padding: 13px 22px;
+            display: block;
+            padding: 13px 30px;
             font-size: 15px;
             line-height: 17px;
             text-transform: uppercase;
             color: black;
             text-align: center;
             letter-spacing: 0.2px;
-            @include transition();
+            @include transition(0.2s);
 
 
             @media screen and (min-width: 768px) and (max-width: 992px) {
                 font-size: 14px;
-            }
+            } 
 
             @media screen and(max-width: $bp-LG) {
                 padding: 15px 10px;
+
+                .dropdown-menu {
+                    position: static !important;
+                    transform: translateX(0) !important;
+                    border: none;
+                    text-align: center;
+                    width: 100%;
+                    font-family: 'Myriad Pro Regular';
+                    display: block;
+                    border: none;
+                    max-height: 0;
+                    overflow: hidden;
+                    margin: 0;
+                    padding: 0 !important;
+                    transition: all 0.4s ease-in-out;
+
+
+                    &.show {
+                        border-top: 1px solid black;
+                        border-bottom: 1px solid black;
+                        max-height: 300px;
+                        margin: 10px 0;
+                    }
+                }
+
             }
 
             &:not(:first-child) {
@@ -60,11 +87,13 @@
             &.active,
             &:hover,
             &:active {
-                font-family: 'Myriad Pro Bold', sans-serif;
+                text-shadow: 0 0 .65px #333, 0 0 .65px #333;
             }
 
             a {
                 color: inherit;
+                width: 100%;
+                display: block;
             }
         }
     }

@@ -1,8 +1,8 @@
 .main-header {
-    padding: 20px 0;
+    position: relative;
     margin-bottom: 40px;
 
-    @media screen and (max-width: $bp-LG){
+    @media screen and (max-width: $bp-LG) {
         padding: 0;
     }
 
@@ -10,7 +10,7 @@
         padding: 40px 0;
         width: 100%;
 
-        @media screen and (max-width: $bp-LG){
+        @media screen and (max-width: $bp-LG) {
             padding: 0;
         }
 
@@ -30,19 +30,19 @@
             display: flex;
             margin-top: 30px;
 
-            @media screen and (max-width: $bp-LG){
+            @media screen and (max-width: $bp-LG) {
                 margin-top: 0;
                 padding: 20px;
                 margin-bottom: 20px;
                 background-color: $sp-color-primary;
             }
-        
+
 
             &__form {
                 position: relative;
                 width: 250px;
 
-                @media screen and (max-width: $bp-LG){
+                @media screen and (max-width: $bp-LG) {
                     margin-right: 10px;
                     width: 50%;
                 }
@@ -71,10 +71,10 @@
                     &::placeholder {
                         color: rgba(0, 0, 0, 0.849);
 
-                        
-                    @media screen and(max-width: $bp-LG) {
-                        color: #fff;
-                    }
+
+                        @media screen and(max-width: $bp-LG) {
+                            color: #fff;
+                        }
                     }
 
                 }
@@ -94,17 +94,17 @@
                 }
             }
 
-            &__lang{
-                @media screen and (max-width: $bp-LG){
+            &__lang {
+                @media screen and (max-width: $bp-LG) {
                     width: 30%;
                 }
             }
 
-            &__toggler{
+            &__toggler {
                 display: none;
                 background-color: #b57a30;
-                
-                @media screen and (max-width: $bp-LG){
+
+                @media screen and (max-width: $bp-LG) {
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -114,7 +114,7 @@
                     top: 0;
                     right: 0;
 
-                    button{
+                    button {
                         color: #fff;
                         font-size: 20px;
                     }
@@ -123,8 +123,8 @@
         }
 
         &__brand {
-            height: 90px;
-    
+            height: 70px;
+
             @media screen and(max-width: $bp-LG) {
                 height: auto;
                 margin-bottom: 50px;
@@ -132,11 +132,40 @@
                 display: flex;
                 justify-content: center;
             }
-    
+
             img {
                 height: 100%;
             }
         }
     }
 
+}
+
+.nav-bege {
+    .main-header {
+        padding: 0;
+
+        &__content {
+            background-image: url(/images/banners/bgwave.png);
+            background-size: cover;
+        }
+    }
+
+    .main-nav {
+    
+        @media screen and (min-width: $bp-LG){
+            background: #e9cd8f;
+        }
+
+        &__list__item {
+            &:not(:first-child) {
+                border-left: 1px solid #fff;
+
+
+                @media screen and(max-width: $bp-LG) {
+                    border-left: none;
+                }
+            }
+        }
+    }
 }
