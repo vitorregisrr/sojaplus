@@ -1613,6 +1613,12 @@ textarea.form-control {
   padding: 20px 0;
 }
 
+.page-header__date {
+  font-size: 17px;
+  font-weight: lighter;
+  color: #afafaf;
+}
+
 .page-header__links {
   font-family: 'Myriad Pro Light';
   color: #07532a;
@@ -1811,6 +1817,17 @@ textarea.form-control {
   font-size: 19px;
   letter-spacing: 0.3px;
   text-align: justify;
+}
+
+.noticia-section {
+  padding: 30px 0;
+  margin-bottom: 60px;
+  font-size: 20px;
+}
+
+.noticia-section img {
+  width: 100%;
+  margin-bottom: 25px;
 }
 
 .documentos-ref__carousel .owl-nav, .ultimoseventos-carousel__carousel .owl-nav {
