@@ -1,0 +1,12 @@
+.documentos-ref, .ultimoseventos-carousel{
+    &__carousel{
+
+        .owl-nav{
+            top: 32% !important;
+        }
+
+        .owl-dot{
+            border-color: #b57b30 !important;
+        }
+    }
+}

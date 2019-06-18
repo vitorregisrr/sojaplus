@@ -32,10 +32,38 @@
     }
     
     &--pt{
-        background-image: url(/images/flags/pt.png);
+        background-image: url(../images/flags/pt.png);
     }
 
     &--ing{
-        background-image: url(/images/flags/ing.png);
+        background-image: url(../images/flags/ing.png);
+    }
+}
+
+.btn-primary{
+    min-height: 40px;
+    background-color: #f5ebd0 !important;
+    border: 1px solid #b57b30;
+    color: black;
+    font-family: 'Myriad Pro Bold';
+    @include transition();
+
+    &:hover{
+        background-color: #e4dabe;
+        color: black;
+    }
+}
+
+.btn-default{
+    min-height: 40px;
+    background-color: #dbdbdb !important;
+    border: 1px solid #b57b30;
+    color: black;
+    font-family: 'Myriad Pro Bold';
+    @include transition();
+
+    &:hover{
+        background-color: #e4dabe;
+        color: black;
     }
 }

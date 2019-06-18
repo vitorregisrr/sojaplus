@@ -1,0 +1,44 @@
+.resultadobusca{
+    margin: 40px 0 100px;
+    
+    &__item{
+        height: auto;
+        min-height: 350px;
+        width: 100%;
+        padding: 50px 0;
+        
+        &:nth-child(odd){
+            background-color: #fffcf4;
+            border-bottom: 1.5px solid #b57b30;
+            border-top: 1.5px solid #b57b30;
+        }
+
+        &__title{
+            font-family: 'Myriad Pro Bold';
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        &__desc{
+            font-size: 21px;
+            margin-bottom: 15px;
+            letter-spacing: 0.3px;
+
+            b{
+                color: #b57b30;
+            }
+        }
+
+        &__link{
+            display: block;
+            font-size: 21px;
+            color: #0b6435;
+            margin-bottom: 20px;
+
+            &:hover{
+                color: #09522b;
+            }
+        }
+    }
+    
+}

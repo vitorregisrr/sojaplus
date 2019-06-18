@@ -1,0 +1,66 @@
+.imprensa {
+    min-height: 400px;
+
+    .title {
+        font-family: 'Myriad Pro Regular';
+        font-size: 30px;
+        color: #075329;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+
+
+    &__buttons {
+        display: flex;
+        width: 100%;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+
+        span {
+            display: block;
+            font-family: 'Myriad Pro Bold';
+            padding-top: 7px;
+        }
+
+        button {
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid #b57b30;
+            padding: 14px 20px;
+            line-height: 16px;
+            @include transition();
+
+            &.active,
+            &:focus {
+                background-color: #f5ebd0;
+                outline: none;
+            }
+
+            &:hover {
+                background-color: #b57b30;
+                color: #fff;
+            }
+        }
+    }
+
+
+    &__section {
+        
+        &.clipping {
+            padding: 40px 0;
+            background-color: transparent;
+            
+            &.all{
+                background-color: #f5ebd0;
+            }
+
+            .owl-dots {
+                padding-bottom: 0px;
+            }
+
+        }
+
+    }
+}

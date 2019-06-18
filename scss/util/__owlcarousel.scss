@@ -1,5 +1,5 @@
-.owl-carousel{
-    &.nav-center{
+.owl-carousel {
+    &.nav-center {
         .owl-nav {
             display: flex;
             justify-content: center;
@@ -28,6 +28,7 @@
                 &:hover {
                     opacity: 1;
                 }
+
                 &:focus {
                     outline: none;
                 }
@@ -37,8 +38,8 @@
                 }
 
                 @media screen and(max-width: $bp-SM) {
-                    width: 50px;
-                    height: 30px;
+                    width: 40px;
+                    height: 40px;
                 }
             }
 
@@ -50,23 +51,33 @@
                 right: -13%;
             }
 
-            @media screen and(max-width: $bp-MD){
+            @media screen and(max-width: $bp-MD) {
                 .owl-prev {
                     left: -17%;
                 }
-    
+
                 .owl-next {
                     right: -17%;
                 }
             }
 
-            @media screen and(max-width: $bp-SM){
+            @media screen and(max-width: 1390px) and (min-width: 1246px ) {
+                .owl-prev {
+                    left: -10%;
+                }
+
+                .owl-next {
+                    right: -10%;
+                }
+            }
+
+            @media screen and(max-width: $bp-SM) {
                 height: auto;
-        
+
                 .owl-prev {
                     left: -4%;
                 }
-    
+
                 .owl-next {
                     right: -4%;
                 }
@@ -74,9 +85,44 @@
         }
     }
 
-    .item{
+    .item {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
+
+    .owl-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
+
+        .owl-dot {
+            width: 12px;
+            height: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.699);
+            border-radius: 50%;
+            margin-right: 10px;
+            cursor: pointer;
+
+            &.active {
+                background-color: #b57b30;
+            }
+
+            &:focus,
+            &:active {
+                outline: none;
+            }
+        }
+    }
+
+
+}
+
+.owl-center .owl-stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
 }

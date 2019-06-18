@@ -127,7 +127,8 @@
 
             @media screen and(max-width: $bp-LG) {
                 height: auto;
-                margin-bottom: 50px;
+                margin-top: 15px;
+                margin-bottom: 30px;
                 order: 1;
                 display: flex;
                 justify-content: center;
@@ -146,7 +147,7 @@
         padding: 0;
 
         &__content {
-            background-image: url(/images/banners/bgwave.png);
+            background-image: url(../images/banners/bgwave.png);
             background-size: cover;
         }
     }

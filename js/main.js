@@ -4,5 +4,55 @@
     //Init Libs
     new WOW().init();
     $('.lazy').lazyload();
-    
+
+    // Home scroll down
+    $('#home__scrolldown').click( function(){
+        $('html, body').animate({
+            scrollTop: $("#cursos-carousel").offset().top
+        }, 600);
+    });
+
+    //Imprensa 
+    $('.imprensa__buttons button').click(function () {
+        const target = $(this).data('target');
+
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+
+        $('.imprensa__section.show').fadeOut();
+        $('.imprensa__section.show').removeClass('show');
+
+        if (target === '*') {
+            $('.imprensa__section').fadeIn();
+            $('.imprensa__section').addClass('show');
+            $('.imprensa__section').addClass('all');
+
+        } else {
+            $(target).addClass('show');
+            $(target).removeClass('all');
+            $(target).fadeIn();
+        }
+    })
+
+
+    //scroll top
+    var scrollTopBtn = $('.scroll-top');
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 300) {
+            scrollTopBtn.addClass('show');
+        } else {
+            scrollTopBtn.removeClass('show');
+        }
+    });
+
+    scrollTopBtn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, '300');
+    });
+
+    window.dispatchEvent(new Event('resize'));
+
 })();

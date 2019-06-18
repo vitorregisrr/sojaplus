@@ -4,7 +4,7 @@
     background-image: url();
     background-size: cover;
     position: relative;
-    background-image: url(/images/banners/bannerhome.png);
+    background-image: url(../images/banners/bannerhome.png);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -16,9 +16,9 @@
         align-items: center;
         text-align: center;
         height: 40%;
-        padding-bottom: 60px;
+        padding-bottom: 20px;
 
-        @media screen and(max-height: 850px) and (max-width: 1455px){
+        @media screen and(max-height: 850px) and (max-width: 1000px){
             padding-bottom: 150px;
         }
 
@@ -28,7 +28,7 @@
             text-transform: uppercase;
             font-family: 'Myriad Pro Light', sans-serif;
             max-width: 62%;
-            color: #075329;
+            color:  #075329;
             
             @media screen and(max-width: 768px){
                 font-size: 20px;
@@ -42,6 +42,10 @@
                 font-size: 30px;
             }
 
+            @media screen and (min-height: 690px) and (max-width: $bp-MD){
+                padding-top: 30px;
+                font-size: 22px;
+            }
 
             
         }
@@ -55,7 +59,7 @@
         background: none;
         border: none !important;
         outline: none !important;
-        background-image: url(/images/ico/scrolldown.png);
+        background-image: url(../images/ico/scrolldown.png);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;

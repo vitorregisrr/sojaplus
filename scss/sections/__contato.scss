@@ -1,0 +1,66 @@
+.contato {
+    background-image: url(../images/banners/bgwave.png);
+    background-position: left left;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    margin-bottom: 150px;
+
+    @media screen and (max-width: $bp-MD) {
+        background-size: 100% 60%;
+    }
+
+    &__form {
+        padding: 70px 0;
+        padding-right: 50px;
+
+        @media screen and (max-width: $bp-MD) {
+            padding-right: 0;
+        }
+
+        &__title {
+            font-size: 30px;
+            color: #075329;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            border: 1px solid black;
+            background-color: #fff;
+        }
+
+        button {
+            font-family: 'Myriad Pro Bold';
+            font-size: 18px;
+        }
+    }
+
+    &__info {
+        padding-left: 30px;
+        height: 100%;
+
+        @media screen and (max-width: $bp-MD) {
+            padding-left: 0;
+        }
+
+        &__img {
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+        }
+
+        &__list {
+            margin-top: 30px;
+            font-size: 17px;
+
+            span {
+                font-family: 'Myriad Pro Bold';
+            }
+
+            li {
+                padding: 10px 0;
+            }
+        }
+    }
+}

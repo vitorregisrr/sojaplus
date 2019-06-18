@@ -1,0 +1,108 @@
+.linhas-acao{
+    padding: 20px 0;
+
+    @media screen and (max-width: 768px){
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    &__box{
+        position: relative;
+        display: flex;
+        background-color: #fffcf4;
+        border: 1px solid #e4af3d;
+
+        &:after{
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background-color: #e4af3d;
+            left: 80px
+        }
+
+        @media screen and (max-width: $bp-LG) {
+            &:after{
+                left: 30px;
+            }               
+        }
+        
+        &__acoes{
+            width: 45%;
+            padding: 20px 50px 20px 125px;
+            text-align: justify;
+            font-size: 17px;
+            letter-spacing: 0.3px;
+
+            @media screen and (max-width: $bp-LG) {
+                padding-left: 75px;
+            }
+
+            &__item{
+                position: relative;
+
+                &--title{
+                    padding: 10px 0;
+                    margin-top: 15px;
+                    font-size: 28px;
+                    line-height: 31px;
+                    width: 50%;
+                    color: #b57a30;
+                    text-transform: uppercase;
+                    letter-spacing: 0.7px;
+                }
+
+                &:after{
+                    content: '';
+                    position: absolute;
+                    left: -55px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 20px;
+                    height: 20px;
+                    background-color: #fffcf4;
+                    border-radius: 50%;
+                    border: 1px solid #e4af3d;
+                    z-index: 2;
+                }
+
+                &:not(:last-child){
+                    margin-bottom: 30px;
+                }
+            }
+
+            
+        }
+
+        &__img{
+            position: relative;
+            width: 55%;
+            flex: 1;
+            z-index: 3;
+
+            img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                @media screen and (max-width: $bp-LG){
+                    height: 300px;
+                    position: static;
+                }
+            }
+        }
+
+        @media screen and (max-width: $bp-LG) {
+            flex-direction: column;
+
+            &__acoes{
+                width: 100%;
+            }
+
+            &__img{
+                width: 100%;
+            }
+        }
+    }
+}
