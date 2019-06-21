@@ -61,7 +61,7 @@
                 }
             }
 
-            @media screen and(max-width: 1390px) and (min-width: 1246px ) {
+            @media screen and(max-width: 1390px) and (min-width: 1246px) {
                 .owl-prev {
                     left: -10%;
                 }
@@ -71,7 +71,7 @@
                 }
             }
 
-            @media screen and(max-width: 1300px) and (min-width: 1000px ) {
+            @media screen and(max-width: 1300px) and (min-width: 1000px) {
                 .owl-prev {
                     left: -8%;
                 }
@@ -131,8 +131,10 @@
 }
 
 .owl-center .owl-stage {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100% !important;
+    @media screen and (min-width: $bp-LG) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100% !important;
+    }
 }

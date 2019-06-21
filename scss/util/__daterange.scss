@@ -36,6 +36,26 @@
     }
 
     .drp-buttons{
+        position: relative;
         border-color: #e5af3c;
+
+        @media screen and (max-width: $bp-SM){
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            padding-top: 50px;
+
+            span{
+                position: absolute;
+                margin-bottom: 10px;
+                padding-right: 0 !important;
+                top: 20px;
+            }
+
+            button{
+                flex: 30%;
+                margin-left: 0 !important;
+            }
+        }
     }
 }

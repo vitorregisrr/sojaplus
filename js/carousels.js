@@ -183,7 +183,7 @@
          responsive: {
              0: {
                  items: 1,
-                 margin: 30
+                 margin: 0
              },
 
              500: {

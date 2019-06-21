@@ -417,11 +417,13 @@ b {
   outline: none;
 }
 
-.owl-center .owl-stage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100% !important;
+@media screen and (min-width: 992px) {
+  .owl-center .owl-stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+  }
 }
 
 .daterangepicker {
@@ -461,7 +463,27 @@ b {
 }
 
 .daterangepicker .drp-buttons {
+  position: relative;
   border-color: #e5af3c;
+}
+
+@media screen and (max-width: 576px) {
+  .daterangepicker .drp-buttons {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+  }
+  .daterangepicker .drp-buttons span {
+    position: absolute;
+    margin-bottom: 10px;
+    padding-right: 0 !important;
+    top: 20px;
+  }
+  .daterangepicker .drp-buttons button {
+    flex: 30%;
+    margin-left: 0 !important;
+  }
 }
 
 .main-header {
@@ -906,7 +928,14 @@ textarea.form-control {
 
 .documento {
   height: 300px;
+  padding: 25px;
   width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .documento {
+    padding: 25px 40px;
+  }
 }
 
 .documento__date {
