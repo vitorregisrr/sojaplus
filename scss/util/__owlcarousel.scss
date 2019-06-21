@@ -71,6 +71,16 @@
                 }
             }
 
+            @media screen and(max-width: 1300px) and (min-width: 1000px ) {
+                .owl-prev {
+                    left: -8%;
+                }
+
+                .owl-next {
+                    right: -8%;
+                }
+            }
+
             @media screen and(max-width: $bp-SM) {
                 height: auto;
 

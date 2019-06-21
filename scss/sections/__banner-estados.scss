@@ -40,5 +40,9 @@
     img{
         margin-top: 20px;
         width: 80%;
+
+        @media screen and (max-width: $bp-SM){
+            width: 105%;
+        }
     }
 }
