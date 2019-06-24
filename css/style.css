@@ -123,6 +123,10 @@
   display: none;
 }
 
+.font_bold {
+  font-weight: bold;
+}
+
 .bounce {
   -moz-animation: bounce 1.5s infinite;
   -webkit-animation: bounce 1.5s infinite;
@@ -928,7 +932,6 @@ textarea.form-control {
 
 .documento {
   height: 300px;
-  padding: 25px;
   width: 100%;
 }
 
@@ -1095,6 +1098,7 @@ textarea.form-control {
 
 @media screen and (max-width: 768px) {
   .scroll-top {
+    position: fixed;
     right: 50px;
     bottom: 100px;
   }
