@@ -5,13 +5,19 @@
         font-family: 'Myriad Pro Regular';
         border: none;
         background-color: rgba(255, 255, 255, 0.986);
-        left: -30px !important;
-        top: 9px !important;
-        padding: 10px 30px;
-        font-size: 15px;
+        left: 0px !important;
+        top: 35px !important;
+        padding: 15px;
+        padding-top: 5px;
+        font-size: 13px;
+        white-space: nowrap;
         text-transform: none;
         width: 100%;
         box-shadow: 1px 1px 10px rgba(22, 22, 22, 0.062);
+
+        @media screen and (max-width: $bp-XL){
+            top: 52px !important;
+        }
         
         .dropdown-item {
             padding: 17px 2px;

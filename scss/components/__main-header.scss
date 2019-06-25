@@ -12,6 +12,7 @@
 
         @media screen and (max-width: $bp-LG) {
             padding: 0;
+            border-bottom: 1px solid rgba(8, 70, 16, 0.445);
         }
 
         .container {
@@ -159,8 +160,8 @@
         }
 
         &__list__item {
-            &:not(:first-child) {
-                border-left: 1px solid #fff;
+            &:not(:last-child) {
+                border-right: 1px solid #fff;
 
 
                 @media screen and(max-width: $bp-LG) {

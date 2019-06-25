@@ -6,7 +6,7 @@
     $('.lazy').lazyload();
 
     // Home scroll down
-    $('#home__scrolldown').click( function(){
+    $('#home__scrolldown').click(function () {
         $('html, body').animate({
             scrollTop: $("#cursos-carousel").offset().top
         }, 600);
@@ -52,6 +52,27 @@
             scrollTop: 0
         }, '300');
     });
+
+    // Dropdown hover
+    function toggleDropdown(e) {
+        const _d = $(e.target).closest('.dropdown'),
+            _m = $('.dropdown-menu', _d);
+        setTimeout(function () {
+            const shouldOpen = e.type !== 'click' && _d.is(':hover');
+            _m.toggleClass('show', shouldOpen);
+            _d.toggleClass('show', shouldOpen);
+            $('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
+        }, e.type === 'mouseleave' ? 100 : 0);
+    }
+
+    $('body')
+        .on('mouseenter mouseleave', '.dropdown', toggleDropdown)
+        .on('click', '.dropdown', function(e){
+            e.stopPropagation();
+        })
+        .on('click', '.dropdown-menu a', toggleDropdown);
+
+    
 
     window.dispatchEvent(new Event('resize'));
 

@@ -509,6 +509,7 @@ b {
 @media screen and (max-width: 992px) {
   .main-header__content {
     padding: 0;
+    border-bottom: 1px solid rgba(8, 70, 16, 0.445);
   }
 }
 
@@ -668,12 +669,12 @@ b {
   }
 }
 
-.nav-bege .main-nav__list__item:not(:first-child) {
-  border-left: 1px solid #fff;
+.nav-bege .main-nav__list__item:not(:last-child) {
+  border-right: 1px solid #fff;
 }
 
 @media screen and (max-width: 992px) {
-  .nav-bege .main-nav__list__item:not(:first-child) {
+  .nav-bege .main-nav__list__item:not(:last-child) {
     border-left: none;
   }
 }
@@ -694,7 +695,7 @@ b {
     width: 100%;
     max-height: 0;
     overflow: hidden;
-    background-color: #fff;
+    background-color: rgba(238, 249, 252, 0.932);
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
@@ -752,7 +753,10 @@ b {
     text-align: center;
     width: 100%;
     font-family: 'Myriad Pro Regular';
-    display: block;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: none;
     max-height: 0;
     overflow: hidden;
@@ -761,27 +765,38 @@ b {
     transition: all 0.4s ease-in-out;
     box-shadow: none !important;
     border-radius: 0;
+    background-color: transparent !important;
+  }
+  .main-nav__list__item .dropdown-menu a {
+    width: 60% !important;
   }
   .main-nav__list__item .dropdown-menu.show {
     border-top: 1px solid black;
-    border-bottom: 1px solid black;
     max-height: 300px;
     margin: 10px 0;
   }
 }
 
-.main-nav__list__item:not(:first-child) {
-  border-left: 1px solid black;
+.main-nav__list__item:not(:last-child) {
+  border-right: 1px solid black;
 }
 
 @media screen and (max-width: 992px) {
-  .main-nav__list__item:not(:first-child) {
-    border-left: none;
+  .main-nav__list__item:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid black;
+    width: 100%;
   }
 }
 
 .main-nav__list__item.active, .main-nav__list__item:hover, .main-nav__list__item:active {
   text-shadow: 0 0 .65px #333, 0 0 .65px #333;
+}
+
+@media screen and (min-width: 992px) {
+  .main-nav__list__item:nth-child(3) {
+    min-width: 23s0px;
+  }
 }
 
 .main-nav__list__item a {
@@ -1012,13 +1027,21 @@ textarea.form-control {
   font-family: 'Myriad Pro Regular';
   border: none;
   background-color: rgba(255, 255, 255, 0.986);
-  left: -30px !important;
-  top: 9px !important;
-  padding: 10px 30px;
-  font-size: 15px;
+  left: 0px !important;
+  top: 35px !important;
+  padding: 15px;
+  padding-top: 5px;
+  font-size: 13px;
+  white-space: nowrap;
   text-transform: none;
   width: 100%;
   box-shadow: 1px 1px 10px rgba(22, 22, 22, 0.062);
+}
+
+@media screen and (max-width: 1200px) {
+  .dropdown .dropdown-menu {
+    top: 52px !important;
+  }
 }
 
 .dropdown .dropdown-menu .dropdown-item {
@@ -1205,7 +1228,7 @@ textarea.form-control {
 
 .linhaacao-card__caption p {
   font-size: 16px;
-  text-align: justify;
+  text-align: left;
 }
 
 .btn-transparent {
@@ -1414,7 +1437,13 @@ textarea.form-control {
 
 @media screen and (max-height: 850px) and (max-width: 1000px) {
   .home__caption {
-    padding-bottom: 150px;
+    padding-bottom: 130px;
+  }
+}
+
+@media screen and (max-height: 580px) {
+  .home__caption {
+    padding-bottom: 90px;
   }
 }
 
@@ -1447,7 +1476,7 @@ textarea.form-control {
 @media screen and (min-height: 690px) and (max-width: 768px) {
   .home__caption__title {
     padding-top: 30px;
-    font-size: 22px;
+    font-size: 23px;
   }
 }
 
@@ -1503,6 +1532,12 @@ textarea.form-control {
   align-items: center;
 }
 
+@media screen and (max-width: 576px) {
+  .banner-organizadores__content {
+    padding: 10px;
+  }
+}
+
 .banner-organizadores__item {
   margin: 15px 18px;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1524,12 +1559,28 @@ textarea.form-control {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .banner-organizadores__item {
+    width: 45px;
+    height: 45px;
+    margin: 10px;
+  }
+}
+
 .banner-organizadores__item:hover {
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
   -ms-transform: scale(1.05);
   -o-transform: scale(1.05);
   transform: scale(1.05);
+}
+
+@media screen and (max-width: 576px) {
+  .banner-organizadores.items-lg .banner-organizadores__item {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+  }
 }
 
 .cursos-carousel {
@@ -2112,7 +2163,7 @@ textarea.form-control {
 .linhas-acao__box__acoes {
   width: 45%;
   padding: 20px 50px 20px 125px;
-  text-align: justify;
+  text-align: left;
   font-size: 17px;
   letter-spacing: 0.3px;
 }
