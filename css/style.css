@@ -1422,8 +1422,18 @@ textarea.form-control {
   position: relative;
   background-image: url(../images/banners/bannerhome.png);
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-attachment: fixed;
   background-position: center;
+}
+
+@media screen and (max-width: 576px) {
+  .home {
+    background-attachment: scroll;
+  }
 }
 
 .home__caption {
