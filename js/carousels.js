@@ -27,7 +27,7 @@
          loop: false,
          margin: 0,
          center: true,
-         dots: false,
+         dots: true,
          nav: true,
          navText: [
              "<i class='owl-nav chevron-left'>", "<i class='owl-nav chevron-right'>"
@@ -59,7 +59,7 @@
       agendaCarousel.owlCarousel({
           loop: false,
           margin: 0,
-          dots: false,
+          dots: true,
           nav: true,
           navText: [
               "<i class='owl-nav chevron-left'>", "<i class='owl-nav chevron-right'>"
@@ -171,7 +171,7 @@
      notasreleasesCarousel.owlCarousel({
          loop: false,
          margin: 0,
-         dots: false,
+         dots: true,
          nav: true,
          navText: [
              "<i class='owl-nav chevron-left'>", "<i class='owl-nav chevron-right'>"

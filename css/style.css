@@ -364,12 +364,13 @@ b {
   justify-content: center;
   align-items: center;
   padding: 40px 0;
+  padding-bottom: 10px;
 }
 
 .owl-carousel .owl-dots .owl-dot {
   width: 12px;
   height: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.699);
+  border: 1px solid #b57b30;
   border-radius: 50%;
   margin-right: 10px;
   cursor: pointer;
@@ -1590,6 +1591,10 @@ textarea.form-control {
   .cursos-carousel .owl-dots {
     top: 43%;
   }
+}
+
+.cursos-carousel .owl-dots .owl-dot {
+  border: 1px solid rgba(255, 255, 255, 0.774);
 }
 
 .cursos-carousel__item {

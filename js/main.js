@@ -23,11 +23,14 @@
         $('.imprensa__section.show').removeClass('show');
 
         if (target === '*') {
+            $('#banner-imprensa').attr('src', '../images/banners/imprensa-#artigos.png')
             $('.imprensa__section').fadeIn();
             $('.imprensa__section').addClass('show');
             $('.imprensa__section').addClass('all');
 
         } else {
+            console.log(target)
+            $('#banner-imprensa').attr('src', '../images/banners/imprensa-'+ target +'.png')
             $(target).addClass('show');
             $(target).removeClass('all');
             $(target).fadeIn();
